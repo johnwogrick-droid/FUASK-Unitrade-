@@ -1,0 +1,411 @@
+.trade-complete-page {
+  min-height: 100vh;
+  background: #fafaf8;
+  color: #171717;
+}
+
+.trade-complete-header {
+  min-height: 72px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.trade-complete-back-button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #171717;
+}
+
+.trade-complete-back-button:hover {
+  border-color: #d4a017;
+  color: #b8890b;
+}
+
+.trade-complete-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.trade-complete-brand-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #d4a017;
+  color: #fff;
+}
+
+.trade-complete-header-space {
+  flex: 1;
+}
+
+.trade-complete-content {
+  width: min(620px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 52px 0 64px;
+}
+
+.trade-complete-hero {
+  text-align: center;
+}
+
+.trade-complete-success-icon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ecfdf3;
+  color: #16a34a;
+}
+
+.trade-complete-eyebrow {
+  display: block;
+  color: #16a34a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.trade-complete-hero h1 {
+  margin: 8px 0 0;
+  font-size: clamp(32px, 8vw, 44px);
+  line-height: 1.05;
+}
+
+.trade-complete-hero p {
+  max-width: 490px;
+  margin: 13px auto 28px;
+  color: #737373;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.trade-complete-trade-card,
+.trade-complete-trust-card,
+.trade-complete-rating-card,
+.trade-complete-next-card {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 18px;
+}
+
+.trade-complete-trade-card {
+  padding: 19px;
+}
+
+.trade-complete-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.trade-complete-card-heading > span {
+  color: #737373;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.trade-complete-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #ecfdf3;
+  color: #16a34a;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.trade-complete-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.trade-complete-item-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: #fbf4dc;
+  color: #b8890b;
+}
+
+.trade-complete-item-info {
+  min-width: 0;
+}
+
+.trade-complete-item-info strong {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+}
+
+.trade-complete-item-info span {
+  display: block;
+  margin-top: 4px;
+  color: #b8890b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.trade-complete-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: #eeeeee;
+}
+
+.trade-complete-person {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.trade-complete-avatar {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #171717;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.trade-complete-person small {
+  display: block;
+  margin-bottom: 3px;
+  color: #a3a3a3;
+  font-size: 10px;
+}
+
+.trade-complete-person strong {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+}
+
+.trade-complete-verified-icon {
+  margin-left: auto;
+  color: #16a34a;
+}
+
+.trade-complete-trust-card {
+  margin-top: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  background: #fffdf7;
+  border-color: #efe4c4;
+}
+
+.trade-complete-trust-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #fbf4dc;
+  color: #b8890b;
+}
+
+.trade-complete-trust-label {
+  display: block;
+  color: #b8890b;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.trade-complete-trust-card h2 {
+  margin: 4px 0 0;
+  font-size: 16px;
+}
+
+.trade-complete-trust-card p {
+  margin: 5px 0 0;
+  color: #737373;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.trade-complete-rating-card {
+  margin-top: 12px;
+  padding: 18px;
+}
+
+.trade-complete-rating-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.trade-complete-rating-heading span {
+  display: block;
+  color: #a3a3a3;
+  font-size: 10px;
+}
+
+.trade-complete-rating-heading strong {
+  display: block;
+  margin-top: 3px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+}
+
+.trade-complete-stars {
+  display: flex;
+  gap: 2px;
+  color: #d4a017;
+}
+
+.trade-complete-rating-note {
+  margin-top: 13px;
+  padding-top: 13px;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #16a34a;
+  font-size: 10px;
+}
+
+.trade-complete-next-card {
+  margin-top: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.trade-complete-next-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #fbf4dc;
+  color: #b8890b;
+}
+
+.trade-complete-next-card h2 {
+  margin: 1px 0 0;
+  font-size: 15px;
+}
+
+.trade-complete-next-card p {
+  margin: 5px 0 0;
+  color: #737373;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.trade-complete-actions {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.trade-complete-primary-button,
+.trade-complete-secondary-button {
+  min-height: 52px;
+  border-radius: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.trade-complete-primary-button {
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #d4a017;
+  color: #fff;
+}
+
+.trade-complete-primary-button:hover {
+  background: #b8890b;
+}
+
+.trade-complete-secondary-button {
+  border: 1px solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  color: #171717;
+}
+
+.trade-complete-secondary-button:hover {
+  border-color: #d4a017;
+}
+
+.trade-complete-secondary-button svg:last-child {
+  margin-left: 2px;
+  color: #a3a3a3;
+}
+
+@media (max-width: 600px) {
+  .trade-complete-header {
+    padding: 12px 16px;
+  }
+
+  .trade-complete-content {
+    width: min(100% - 24px, 620px);
+    padding-top: 36px;
+  }
+
+  .trade-complete-success-icon {
+    width: 82px;
+    height: 82px;
+  }
+
+  .trade-complete-hero p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .trade-complete-content {
+    width: calc(100% - 20px);
+  }
+
+  .trade-complete-rating-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

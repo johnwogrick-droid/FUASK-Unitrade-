@@ -1,0 +1,941 @@
+:root {
+  --unitrade-gold: #d4a017;
+  --unitrade-gold-dark: #b8890b;
+  --unitrade-gold-soft: #fbf8ef;
+  --unitrade-gold-pale: #fffaf0;
+
+  --unitrade-white: #ffffff;
+  --unitrade-bg: #f7f8fa;
+
+  --unitrade-text: #202020;
+  --unitrade-text-soft: #6f6f6f;
+  --unitrade-muted: #999999;
+
+  --unitrade-border: #e8e8e8;
+  --unitrade-border-dark: #dddddd;
+
+  --unitrade-success: #2e9b5f;
+  --unitrade-success-bg: #edf9f2;
+
+  --unitrade-danger: #c83a3a;
+  --unitrade-danger-bg: #fff0f0;
+
+  --unitrade-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.05);
+
+  --unitrade-radius-lg: 18px;
+  --unitrade-radius-md: 14px;
+  --unitrade-radius-sm: 10px;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.account-details-page {
+  min-height: 100vh;
+  background: var(--unitrade-bg);
+  color: var(--unitrade-text);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.account-details-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  width: 100%;
+  height: 72px;
+
+  background: var(--unitrade-white);
+  border-bottom: 1px solid var(--unitrade-border);
+}
+
+.account-details-header-inner {
+  width: min(1180px, calc(100% - 40px));
+  height: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.account-details-back {
+  justify-self: start;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 12px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+  color: var(--unitrade-text-soft);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.account-details-back:hover {
+  color: var(--unitrade-gold-dark);
+  background: var(--unitrade-gold-soft);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.unitrade-account-logo {
+  justify-self: center;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: var(--unitrade-text);
+
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.unitrade-account-logo-icon {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: var(--unitrade-gold);
+  color: var(--unitrade-white);
+}
+
+.unitrade-account-logo-text {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.account-details-header-space {
+  width: 1px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.account-details-main {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+
+  padding: 42px 0 70px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.account-details-intro {
+  margin-bottom: 28px;
+}
+
+.account-details-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: var(--unitrade-gold-dark);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.account-details-intro h1 {
+  margin: 0;
+
+  font-size: clamp(30px, 4vw, 39px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  font-weight: 800;
+}
+
+.account-details-intro p {
+  max-width: 620px;
+
+  margin: 10px 0 0;
+
+  color: var(--unitrade-text-soft);
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.account-details-card {
+  margin-bottom: 18px;
+
+  background: var(--unitrade-white);
+  border: 1px solid var(--unitrade-border);
+  border-radius: var(--unitrade-radius-lg);
+
+  box-shadow: var(--unitrade-shadow);
+
+  overflow: hidden;
+}
+
+.account-details-card-heading {
+  padding: 23px 24px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-bottom: 1px solid var(--unitrade-border);
+}
+
+.account-details-card-heading h2 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.account-details-card-heading p {
+  margin: 6px 0 0;
+
+  color: var(--unitrade-text-soft);
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.account-security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  border: 1px solid #e6dfc5;
+  border-radius: 999px;
+
+  background: var(--unitrade-gold-soft);
+  color: var(--unitrade-gold-dark);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   ACCOUNT SUMMARY
+========================= */
+
+.account-profile-summary {
+  padding: 22px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.account-profile-avatar {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--unitrade-gold-soft);
+  color: var(--unitrade-gold-dark);
+
+  font-size: 18px;
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+.account-profile-summary-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.account-profile-name {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.account-profile-name h3 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.account-profile-name svg {
+  color: var(--unitrade-gold-dark);
+  flex-shrink: 0;
+}
+
+.account-profile-summary-info > p {
+  margin: 4px 0 3px;
+
+  color: var(--unitrade-text-soft);
+
+  font-size: 12px;
+}
+
+.account-profile-summary-info > span {
+  color: var(--unitrade-success);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.account-edit-profile-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 10px 13px;
+
+  border: 1px solid var(--unitrade-border);
+  border-radius: 10px;
+
+  background: var(--unitrade-white);
+  color: var(--unitrade-text);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.account-edit-profile-button:hover {
+  border-color: var(--unitrade-gold);
+  background: var(--unitrade-gold-soft);
+  color: var(--unitrade-gold-dark);
+}
+
+/* =========================
+   INFORMATION LIST
+========================= */
+
+.account-information-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-information-item {
+  padding: 19px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border-bottom: 1px solid var(--unitrade-border);
+}
+
+.account-information-item:last-child {
+  border-bottom: none;
+}
+
+.account-information-icon {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: var(--unitrade-gold-soft);
+  color: var(--unitrade-gold-dark);
+
+  flex-shrink: 0;
+}
+
+.account-information-content {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.account-information-content span {
+  color: var(--unitrade-muted);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.account-information-content strong {
+  overflow-wrap: anywhere;
+
+  color: var(--unitrade-text);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.account-information-content small {
+  color: var(--unitrade-text-soft);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.account-verified-icon {
+  color: var(--unitrade-success);
+
+  flex-shrink: 0;
+}
+
+.account-verified-label {
+  padding: 6px 9px;
+
+  border-radius: 999px;
+
+  background: var(--unitrade-success-bg);
+  color: var(--unitrade-success);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   SECURITY
+========================= */
+
+.account-security-item {
+  padding: 21px 24px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.account-security-item-icon {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: var(--unitrade-gold-soft);
+  color: var(--unitrade-gold-dark);
+
+  flex-shrink: 0;
+}
+
+.account-security-item-content h3 {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.account-security-item-content p {
+  max-width: 620px;
+
+  margin: 5px 0 0;
+
+  color: var(--unitrade-text-soft);
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================
+   PASSWORD FORM
+========================= */
+
+.account-password-form {
+  padding: 0 24px 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.account-password-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.account-password-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.account-password-field label {
+  color: var(--unitrade-text);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.account-password-field input {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 13px;
+
+  border: 1px solid var(--unitrade-border-dark);
+  border-radius: 10px;
+
+  background: var(--unitrade-white);
+  color: var(--unitrade-text);
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.account-password-field input::placeholder {
+  color: var(--unitrade-muted);
+}
+
+.account-password-field input:focus {
+  border-color: var(--unitrade-gold);
+
+  box-shadow:
+    0 0 0 3px rgba(212, 160, 23, 0.11);
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  padding-right: 48px;
+}
+
+.password-visibility-button {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+
+  width: 38px;
+  height: 38px;
+
+  transform: translateY(-50%);
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+  color: var(--unitrade-muted);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.password-visibility-button:hover {
+  background: var(--unitrade-gold-soft);
+  color: var(--unitrade-gold-dark);
+}
+
+/* =========================
+   PASSWORD MESSAGES
+========================= */
+
+.account-password-error,
+.account-password-success {
+  padding: 11px 13px;
+
+  border-radius: 10px;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.account-password-error {
+  border: 1px solid #f1cccc;
+  background: var(--unitrade-danger-bg);
+  color: var(--unitrade-danger);
+}
+
+.account-password-success {
+  border: 1px solid #cdebd9;
+  background: var(--unitrade-success-bg);
+  color: var(--unitrade-success);
+}
+
+/* =========================
+   CHANGE PASSWORD BUTTON
+========================= */
+
+.account-change-password-button {
+  align-self: flex-start;
+
+  min-height: 44px;
+
+  padding: 0 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--unitrade-gold);
+  color: var(--unitrade-white);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.account-change-password-button:hover {
+  background: var(--unitrade-gold-dark);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   VERIFICATION CARD
+========================= */
+
+.account-verification-card {
+  margin-bottom: 18px;
+
+  padding: 21px 24px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  border: 1px solid #eadfbd;
+  border-radius: var(--unitrade-radius-lg);
+
+  background: var(--unitrade-gold-pale);
+}
+
+.account-verification-icon {
+  width: 42px;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: var(--unitrade-white);
+  color: var(--unitrade-gold-dark);
+
+  flex-shrink: 0;
+}
+
+.account-verification-card h2 {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.account-verification-card p {
+  max-width: 690px;
+
+  margin: 6px 0 0;
+
+  color: #6f6548;
+
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* =========================
+   ACCOUNT ACTIONS
+========================= */
+
+.account-actions-card {
+  padding-bottom: 7px;
+}
+
+.account-action-row {
+  width: 100%;
+  min-height: 58px;
+
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  border: none;
+  border-bottom: 1px solid var(--unitrade-border);
+
+  background: var(--unitrade-white);
+  color: var(--unitrade-text);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.account-action-row:last-child {
+  border-bottom: none;
+}
+
+.account-action-row:hover {
+  background: var(--unitrade-gold-soft);
+  color: var(--unitrade-gold-dark);
+}
+
+.account-action-row-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.account-action-row > svg {
+  color: var(--unitrade-muted);
+}
+
+.account-action-row:hover > svg {
+  color: var(--unitrade-gold-dark);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 760px) {
+  .account-details-header {
+    height: 66px;
+  }
+
+  .account-details-header-inner {
+    width: calc(100% - 28px);
+  }
+
+  .account-details-back {
+    padding: 8px;
+  }
+
+  .account-details-back span {
+    display: none;
+  }
+
+  .unitrade-account-logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .unitrade-account-logo-text {
+    font-size: 16px;
+  }
+
+  .account-details-main {
+    width: calc(100% - 28px);
+    padding: 28px 0 45px;
+  }
+
+  .account-details-intro {
+    margin-bottom: 22px;
+  }
+
+  .account-details-intro h1 {
+    font-size: 29px;
+  }
+
+  .account-details-intro p {
+    font-size: 12px;
+  }
+
+  .account-details-card-heading {
+    padding: 18px;
+  }
+
+  .account-profile-summary {
+    padding: 18px;
+  }
+
+  .account-information-item {
+    padding: 16px 18px;
+  }
+
+  .account-security-item {
+    padding: 18px;
+  }
+
+  .account-password-form {
+    padding: 0 18px 20px;
+  }
+
+  .account-verification-card {
+    padding: 18px;
+  }
+
+  .account-action-row {
+    padding: 0 18px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 560px) {
+  .account-details-card-heading {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .account-security-badge {
+    align-self: flex-start;
+  }
+
+  .account-profile-summary {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .account-profile-summary-info {
+    flex: 1 1 calc(100% - 78px);
+  }
+
+  .account-edit-profile-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .account-information-item {
+    align-items: flex-start;
+  }
+
+  .account-information-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .account-verified-icon {
+    display: none;
+  }
+
+  .account-verified-label {
+    margin-left: auto;
+  }
+
+  .account-password-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-change-password-button {
+    width: 100%;
+  }
+
+  .account-verification-card {
+    gap: 11px;
+  }
+
+  .account-verification-icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* =========================
+   VERY SMALL SCREENS
+========================= */
+
+@media (max-width: 390px) {
+  .account-details-main {
+    width: calc(100% - 20px);
+  }
+
+  .account-details-intro h1 {
+    font-size: 26px;
+  }
+
+  .account-profile-avatar {
+    width: 54px;
+    height: 54px;
+  }
+
+  .account-information-content strong {
+    font-size: 12px;
+  }
+
+  .account-verified-label {
+    display: none;
+  }
+}
